@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>SqList类帮助文档</title>
+</head>
+<body>
+    <table width="100%" summary="page for SqList"><tr><td style="text-align: center;"><h2>SqList</h2></td></tr></table>
+    <h3>Description</h3>
+    <p>SqList是一个C++顺序表类，可以实现创建顺序表、增、删、查、输出等功能。</p>
+    <p>SqList类在表满的时候能够实现自动扩容，目前默认的容量是50，每次扩容增加50。</p>
+    <p>SqList中默认定义ElemType为char，可以自行修改。若定义为自定义的数据类型，须重载运算符‘==’。</p>
+
+    <h3>Methods</h3>
+    <table summary="Methods">
+        <tr valign="top">
+            <td><code>SqList::SqList()</code></td>
+            <td>
+                <p>构造函数，初始化顺序表</p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td><code>bool SqList::isEmpty()</code></td>
+            <td>
+                <p>返回当前顺序表是否为空</p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td><code>int SqList::getLength()</code></td>
+            <td>
+                <p>返回顺序表的长度</p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td><code>void SqList::disList()</code></td>
+            <td>
+                <p>以每行10个，两个元素之间用空格分隔的方式输出顺序表</p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td><code>bool SqList::getElement(int index, ElemType <![CDATA[&]]>e)</code></td>
+            <td>
+                <p>获取物理下标为index位置的元素，元素返回值保存在e。当物理下标超过顺序表长度或者小于1时，返回false；正确获取元素时返回true</p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td><code>int SqList::locateElement(ElemType e)</code></td>
+            <td>
+                <p>在顺序表中定位元素e，函数返回元素e在顺序表中的物理位序。当顺序表中不存在该元素时返回0</p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td><code>bool SqList::insertElement(int index, ElemType e)</code></td>
+            <td>
+                <p>在物理下标为index位置上插入元素e，函数返回插入操作是否成功。当物理下标超过顺序表长度或者小于1时，返回false；正确插入元素时返回true</p>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td><code>bool SqList::deleteElement(int index, ElemType <![CDATA[&]]>e)</code></td>
+            <td>
+                <p>删除物理下标为index位置的元素，并把该位置的元素赋给e。当物理下标超过顺序表长度或者小于1时，返回false；正确插入元素时返回true</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
